@@ -8,7 +8,8 @@ const Tempapp = () => {
   const [weather, setWeather] = useState(null);
   const [wind, setWind] = useState(null);
   const [countrycode, setCountryCode] = useState(null);
-  const [search, setSearch] = useState("New Delhi");
+  const [cordinates, setCordinates] = useState(null);
+  const [search, setSearch] = useState("Visakhapatnam");
 
   useEffect(() => {
     const fetchApi = async () => {
@@ -19,6 +20,7 @@ const Tempapp = () => {
       setWeather(data.weather);
       setWind(data.wind);
       setCountryCode(data.sys);
+      setCordinates(data.coord);
     };
 
     fetchApi();
@@ -37,6 +39,12 @@ const Tempapp = () => {
               setSearch(e.target.value);
             }}
           />
+        </div>
+
+        <div className="sun-icon">
+          <h1>
+            <i className="fa fa-sun"></i> Sunshine - Weather App
+          </h1>
         </div>
 
         {!city ? (
@@ -70,11 +78,18 @@ const Tempapp = () => {
                   Country Code : {countrycode.country}
                 </h3>
               ) : null}
+              {cordinates ? (
+                <h3 className="cordinates">
+                  Longitude : {cordinates.lon} | Latitude : {cordinates.lat}
+                </h3>
+              ) : null}
             </div>
-
             <div className="wave"></div>
           </div>
         )}
+      </div>
+      <div className="crafted">
+        <h3>Crafted with ❤️ by Shubham 😄</h3>
       </div>
     </>
   );

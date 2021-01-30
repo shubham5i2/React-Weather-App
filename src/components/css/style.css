@@ -1,8 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* font-family: "montseratt", sans-serif; */
+  font-family: "Roboto", sans-serif;
 }
 
 body {
@@ -58,6 +60,17 @@ html:before {
   min-height: 35rem;
 }
 
+.crafted{
+  color: #fff;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 1rem;
+  background-color: transparent;
+  border-radius: 10px;
+  border: 1px solid black;
+  padding: 10px;
+}
+
 .wave {
   opacity: 0.3;
   position: absolute;
@@ -94,6 +107,21 @@ html:before {
   }
 }
 
+.sun-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-bottom: 0.7rem;
+  margin-top: 0.5rem;
+  font-weight: 1000;
+  background: transparent;
+}
+
+.sun-icon i{
+  color: rgb(255, 115, 0);
+}
+
 .info {
   position: absolute;
   display: flex;
@@ -109,7 +137,7 @@ html:before {
   margin-top: -4.5rem;
   text-align: center;
   font-weight: 800;
-  font-size: 2.5rem;
+  font-size: 2rem;
   text-transform: capitalize;
 }
 
@@ -127,15 +155,6 @@ html:before {
   }
 }
 
-/* #date {
-  text-align: center;
-  margin-top: 0.5rem;
-  color: #57606f;
-  font-size: 1.2rem;
-  font-weight: 300;
-  text-transform: uppercase;
-} */
-
 .temp {
   margin-top: 1rem;
   text-align: center;
@@ -144,51 +163,59 @@ html:before {
 
 .tempmin_max {
   text-align: center;
-  margin-top: 1rem;
-  font-weight: 300;
-  font-size: 1.2rem;
-  color: #57606f;
+  margin-top: 1.2rem;
+  font-weight: 400;
+  font-size: 1.1rem;
+  color: #303133;
 }
 
 .feels-like {
   text-align: center;
-  margin-top: 1rem;
-  font-weight: 300;
-  font-size: 1.2rem;
-  color: #57606f;
+  margin-top: 1.2rem;
+  font-weight: 400;
+  font-size: 1.1rem;
+  color: #303133;
 }
 
 .humidity {
   text-align: center;
-  margin-top: 1rem;
-  font-weight: 300;
-  font-size: 1.2rem;
-  color: #57606f;
+  margin-top: 1.2rem;
+  font-weight: 400;
+  font-size: 1.1rem;
+  color: #303133;
 }
 
 .weatherdesc {
   text-align: center;
-  margin-top: 1rem;
-  font-weight: 300;
-  font-size: 1.2rem;
-  color: #57606f;
+  margin-top: 1.2rem;
+  font-weight: 400;
+  font-size: 1.1rem;
+  color: #303133;
   text-transform: capitalize;
 }
 
 .wind-speed {
   text-align: center;
-  margin-top: 1rem;
-  font-weight: 300;
-  font-size: 1.2rem;
-  color: #57606f;
+  margin-top: 1.2rem;
+  font-weight: 400;
+  font-size: 1.1rem;
+  color: #303133;
 }
 
 .country-code {
   text-align: center;
-  margin-top: 1rem;
-  font-weight: 300;
-  font-size: 1.2rem;
-  color: #57606f;
+  margin-top: 1.2rem;
+  font-weight: 400;
+  font-size: 1.1rem;
+  color: #303133;
+}
+
+.cordinates {
+  text-align: center;
+  margin-top: 1.2rem;
+  font-weight: 400;
+  font-size: 1.1rem;
+  color: #303133;
 }
 
 #weathercon {
