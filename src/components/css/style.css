@@ -2,24 +2,48 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "montseratt", sans-serif;
+  /* font-family: "montseratt", sans-serif; */
 }
 
 body {
-  background: #f3f2ef;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   height: 100vh;
   width: 100vw;
-  font-family: "montseratt", sans-serif;
 }
 
 html {
   font-size: 100%;
   height: 100%;
-  background: #eee;
+  background: url("../banner.jpg") no-repeat center;
+  height: 100vh;
+  min-height: 500px;
+  background-size: cover;
+  background-attachment: fixed;
+  opacity: 0.9;
+}
+
+html:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+  background: url("../rain.png");
+  animation: rain 3s linear infinite;
+}
+
+@keyframes rain {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 1000%;
+  }
 }
 
 .box {
@@ -30,7 +54,6 @@ html {
   background: #a5bbdd;
   position: relative;
   overflow: hidden;
-  /* transform: translate(0, 0, 0); */
   min-width: 20rem;
   min-height: 35rem;
 }
@@ -83,7 +106,7 @@ html {
 }
 
 .location {
-  margin-top: -5.5rem;
+  margin-top: -4.5rem;
   text-align: center;
   font-weight: 800;
   font-size: 2.5rem;
@@ -104,17 +127,17 @@ html {
   }
 }
 
-#date {
+/* #date {
   text-align: center;
   margin-top: 0.5rem;
   color: #57606f;
   font-size: 1.2rem;
   font-weight: 300;
   text-transform: uppercase;
-}
+} */
 
 .temp {
-  margin-top: 2.5rem;
+  margin-top: 1rem;
   text-align: center;
   font-size: 2.5rem;
 }
