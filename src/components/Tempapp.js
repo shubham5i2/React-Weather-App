@@ -1,16 +1,18 @@
 import { useEffect, useState } from "react";
 import "./css/style.css";
 
+require("dotenv").config();
+
 const Tempapp = () => {
   const [city, setCity] = useState(null);
   const [weather, setWeather] = useState(null);
   const [wind, setWind] = useState(null);
   const [countrycode, setCountryCode] = useState(null);
-  const [search, setSearch] = useState("Delhi");
+  const [search, setSearch] = useState("New Delhi");
 
   useEffect(() => {
     const fetchApi = async () => {
-      const url = `http://api.openweathermap.org/data/2.5/weather?q=${search}&units=metric&appid=ee48e42f6679ab037b939c63106475f1`;
+      const url = `http://api.openweathermap.org/data/2.5/weather?q=${search}&units=metric&appid=${process.env.REACT_APP_API_KEY}`;
       const response = await fetch(url);
       const data = await response.json();
       setCity(data.main);
@@ -38,7 +40,7 @@ const Tempapp = () => {
         </div>
 
         {!city ? (
-          <p className="errorMsg">No city found with this name</p>
+          <p className="errorMsg">No data found 😢</p>
         ) : (
           <div>
             <div className="info">
